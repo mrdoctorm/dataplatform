@@ -7,6 +7,10 @@ x = datetime.datetime.now()
 # Initializing flask app
 app = Flask(__name__)
 
+@app.route('/')
+@app.route('/index')
+def index():
+    return "Hello, World!"
 
 # Route for seeing a data
 @app.route('/data')
